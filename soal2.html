@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Konverter Kurs Dollar</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 50px;
+    }
+
+    input, button {
+      margin: 10px;
+      padding: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Konverter Kurs Dollar</h2>
+
+  <label for="rupiahInput">14650: </label>
+  <input type="text" id="rupiahInput" placeholder="Jumlah Rupiah">
+
+  <button onclick="convertToDollar()">Konversi ke Dollar</button>
+  <h3>Hasil Konversi:</h3>
+  <div id="result"></div>
+
+  <script>
+    function convertToDollar() {
+      // Mengambil nilai dari inputan jumlah rupiah
+      var rupiahAmount = document.getElementById("rupiahInput").value;
+
+      // Konversi ke dollar berdasarkan kurs 1$ = 14.650
+      var dollarAmount = rupiahAmount / 14650;
+
+      // Menampilkan hasil konversi
+      document.getElementById("result").innerHTML = "Jumlah uang dalam dollar: $" + dollarAmount.toFixed(2);
+    }
+  </script>      
+</body>
+</html>
